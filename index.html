@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<!-- v2-hover-patterns -->
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Luise von Holtey – Massage & Körperarbeit · München</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1011,7 +1013,7 @@
   .footer-bottom-links a:hover { color: rgba(240,232,224,0.6); }
 
   /* ── TRANSLATIONS ── */
-  [data-lang="fr"], [data-lang="en"] { display: none; }
+  .lang-hidden { display: none !important; }
 
   /* ── MOBILE RESPONSIVE ── */
   @media (max-width: 768px) {
@@ -1737,7 +1739,7 @@
     document.querySelectorAll('[data-lang]').forEach(el => {
       if (el.tagName === 'BUTTON') return; // keep buttons visible
       if (el.tagName === 'A' && el.classList.contains('lang-link')) return;
-      el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+      el.classList.toggle('lang-hidden', el.getAttribute('data-lang') !== lang);
     });
 
     // Nav lang buttons
