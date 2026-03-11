@@ -1129,6 +1129,34 @@
     .footer-grid { grid-template-columns: 1fr; }
   }
 
+/* REZENSIONEN */
+.rezensions-card {
+  background: var(--cream);
+  border: 1px solid rgba(30,107,107,0.12);
+  border-radius: 12px;
+  padding: 28px 32px;
+  width: 340px;
+  flex-shrink: 0;
+}
+.rezensions-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.rezensions-autor {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 </style>
 </head>
 <body>
@@ -1206,6 +1234,66 @@
   </div>
 </section>
 
+<!-- REZENSIONEN -->
+<section id="rezensionen" style="background:var(--rose-light);padding:48px 0;overflow:hidden;">
+  <div style="text-align:center;margin-bottom:32px;">
+    <div class="section-tag" style="justify-content:center;">
+      <span data-lang="de">Stimmen meiner Klientinnen</span>
+      <span data-lang="fr">Ce que disent mes clientes</span>
+      <span data-lang="en">What my clients say</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;">
+      <span style="color:#c9a96e;font-size:20px;">★★★★★</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--text);opacity:0.7;">5,0 · Treatwell</span>
+    </div>
+  </div>
+  <div class="rezensionen-track-wrapper" style="position:relative;">
+    <div class="rezensionen-track" style="display:flex;gap:24px;width:max-content;animation:scrollLeft 30s linear infinite;">
+
+      <!-- Karte 1 -->
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Luise von Holtey hat eine ganz besondere Gabe: sie sieht und fühlt Deine Probleme. Sie erkennt Deine Blockaden und hilft Dir durch ihre heilenden Hände diese zu lösen."</p>
+        <p class="rezensions-autor">— Lisa</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+
+      <!-- Karte 2 -->
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Ihre Behandlung ist immer wirkungsvoll, professionell und einfühlsam. Sie spürt genau, wann etwas mehr Druck nötig ist und wann es eine feinere Berührung braucht."</p>
+        <p class="rezensions-autor">— Anonyme Kundin</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+
+      <!-- Karte 3 -->
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Immer wieder ein tolles Erlebnis. Egal ob bei akuten Beschwerden oder um sich etwas Gutes zu tun – eine Massage bei Luise ist etwas Besonderes."</p>
+        <p class="rezensions-autor">— Anonyme Kundin</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+
+      <!-- Karte 4 -->
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Sie nimmt sich Zeit, geht auf einen ein und erspürt und löst die Verspannungen im Körper wunderbar. Ich war schon mehrmals dort und kann es nur empfehlen!"</p>
+        <p class="rezensions-autor">— Anonyme Kundin</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+
+      <!-- Wiederholung für nahtlosen Loop -->
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Luise von Holtey hat eine ganz besondere Gabe: sie sieht und fühlt Deine Probleme. Sie erkennt Deine Blockaden und hilft Dir durch ihre heilenden Hände diese zu lösen."</p>
+        <p class="rezensions-autor">— Lisa</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+      <div class="rezensions-card">
+        <p class="rezensions-text">„Ihre Behandlung ist immer wirkungsvoll, professionell und einfühlsam. Sie spürt genau, wann etwas mehr Druck nötig ist und wann es eine feinere Berührung braucht."</p>
+        <p class="rezensions-autor">— Anonyme Kundin</p>
+        <span style="color:#c9a96e;font-size:14px;">★★★★★</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- BOTTOM BAR -->
 <div class="bottom-bar">
   <a href="#" onclick="setLang('de'); return false;" class="lang-link" id="bb-de">Deutsch</a>
@@ -1277,6 +1365,45 @@
         <span data-lang="en">Quiet practice in Munich</span>
       </li>
     </ul>
+  </div>
+</section>
+<!-- QUALIFIKATIONEN -->
+<section id="qualifikationen" style="background:var(--cream);padding:80px 6vw;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="section-tag">
+      <span data-lang="de">Ausbildung & Qualifikationen</span>
+      <span data-lang="fr">Formation & Qualifications</span>
+      <span data-lang="en">Training & Qualifications</span>
+    </div>
+    <h2 class="section-title" style="margin-bottom:48px;">
+      <span data-lang="de">Was mich<br><em>befähigt.</em></span>
+      <span data-lang="fr">Ce qui me<br><em>qualifie.</em></span>
+      <span data-lang="en">What<br><em>qualifies me.</em></span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;">
+
+      <!-- Platzhalter 1 -->
+      <div style="border-top:2px solid var(--rose);padding-top:20px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;">2018 – 2019</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:10px;">Lorem ipsum dolor sit</h3>
+        <p style="font-size:14px;line-height:1.7;color:var(--text);opacity:0.8;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <!-- Platzhalter 2 -->
+      <div style="border-top:2px solid var(--rose);padding-top:20px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;">2020 – 2021</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:10px;">Ut labore et dolore</h3>
+        <p style="font-size:14px;line-height:1.7;color:var(--text);opacity:0.8;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <!-- Platzhalter 3 -->
+      <div style="border-top:2px solid var(--rose);padding-top:20px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;">2022 – 2023</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:10px;">Duis aute irure dolor</h3>
+        <p style="font-size:14px;line-height:1.7;color:var(--text);opacity:0.8;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
